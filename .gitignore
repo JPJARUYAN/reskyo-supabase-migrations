@@ -1,0 +1,3 @@
+scripts/service-account.json
+supabase/.temp/
+edge_functions/supabase/.temp/

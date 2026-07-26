@@ -28,7 +28,7 @@ SUPABASE_HOST = "db.iurepkmnnyrxuqqzmfvy.supabase.co"
 SUPABASE_PORT = 5432
 SUPABASE_DB = "postgres"
 SUPABASE_USER = "postgres"
-SUPABASE_PASSWORD = "YOUR_DB_PASSWORD"  # Get from Supabase → Settings → Database
+SUPABASE_PASSWORD = "Jaruyan#2005"  # Get from Supabase → Settings → Database
 
 # Digos City bounding box (approximate)
 # Format: (north, south, east, west)
