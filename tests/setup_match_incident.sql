@@ -1,0 +1,1 @@
+INSERT INTO incidents (type, description, latitude, longitude, location, reporter_id, status, barangay) VALUES ('other', 'TEST-match', 6.7569, 125.3469, ST_SetSRID(ST_MakePoint(125.3469, 6.7569), 4326)::geography, '11111111-1111-1111-1111-111111111111', 'reported', 'Magsaysay');

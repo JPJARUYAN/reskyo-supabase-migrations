@@ -1,0 +1,1 @@
+INSERT INTO users (uid, email, full_name, contact_number, barangay, role, is_approved, responder_status) VALUES ('11111111-1111-1111-1111-111111111111', 'testreporter@test.com', 'Test Reporter', '09000000000', 'Magsaysay', 'resident', true, 'offline') ON CONFLICT (uid) DO NOTHING;

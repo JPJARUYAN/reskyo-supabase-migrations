@@ -1,0 +1,1 @@
+INSERT INTO dispatches (incident_id, responder_id, status, dispatched_at) SELECT id, '22222222-2222-2222-2222-222222222222', 'pending', now() FROM incidents WHERE description = 'TEST-sync';

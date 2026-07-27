@@ -1,0 +1,1 @@
+INSERT INTO users (uid, email, full_name, contact_number, barangay, role, is_approved) VALUES ('22222222-2222-2222-2222-222222222222', 'testsync@test.com', 'Test Sync User', '09000000001', 'Magsaysay', 'resident', true) ON CONFLICT (uid) DO NOTHING;

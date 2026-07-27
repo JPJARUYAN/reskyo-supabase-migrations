@@ -1,0 +1,1 @@
+DELETE FROM dispatches WHERE incident_id IN (SELECT id FROM incidents WHERE description IN ('TEST-sync', 'TEST-match')); DELETE FROM incidents WHERE description IN ('TEST-sync', 'TEST-match'); DELETE FROM users WHERE uid IN ('11111111-1111-1111-1111-111111111111', '22222222-2222-2222-2222-222222222222');

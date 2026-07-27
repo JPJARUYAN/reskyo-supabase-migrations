@@ -1,0 +1,1 @@
+SELECT 'test: match_responders creates dispatches' AS test, COUNT(*) AS dispatch_count, CASE WHEN COUNT(*) > 0 THEN 'PASS' ELSE 'FAIL' END AS result FROM dispatches WHERE incident_id IN (SELECT id FROM incidents WHERE description = 'TEST-match');

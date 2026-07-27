@@ -1,0 +1,1 @@
+SELECT 'test: sync_incident_status' AS test, i.description, i.status AS final_status, CASE WHEN i.status = 'resolved' THEN 'PASS' ELSE 'FAIL' END AS result FROM incidents i WHERE i.description = 'TEST-sync';

@@ -1,0 +1,1 @@
+UPDATE dispatches SET status = 'resolved' WHERE incident_id IN (SELECT id FROM incidents WHERE description = 'TEST-sync') AND status = 'enRoute';
