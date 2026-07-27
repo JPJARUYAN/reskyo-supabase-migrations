@@ -1,0 +1,1 @@
+INSERT INTO incidents (type, description, latitude, longitude, reporter_id, status, barangay) VALUES ('other', 'TEST-debug', 6.7569, 125.3469, (SELECT uid FROM users WHERE role = 'responder' LIMIT 1), 'reported', 'Magsaysay');

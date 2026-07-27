@@ -1,0 +1,1 @@
+SELECT b.name, b.centroid_lat, b.centroid_lng, ST_DWithin(ST_SetSRID(ST_MakePoint(b.centroid_lng, b.centroid_lat), 4326)::geography, ST_SetSRID(ST_MakePoint(125.3469, 6.7569), 4326)::geography, 3000) AS within_3km, haversine_km(6.7569, 125.3469, b.centroid_lat, b.centroid_lng) AS dist_km FROM barangays b WHERE b.name = 'Magsaysay';

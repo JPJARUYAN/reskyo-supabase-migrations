@@ -1,0 +1,1 @@
+SELECT u.uid, u.barangay, u.role, u.is_approved, u.responder_status, b.name AS b_name, b.centroid_lat, b.centroid_lng FROM users u LEFT JOIN barangays b ON b.name = u.barangay WHERE u.role = 'responder';

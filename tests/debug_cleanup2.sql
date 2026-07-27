@@ -1,0 +1,1 @@
+DELETE FROM incidents WHERE description = 'TEST-debug';

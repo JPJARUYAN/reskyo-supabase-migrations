@@ -1,0 +1,1 @@
+SELECT u.uid, b.name, ST_DWithin(ST_SetSRID(ST_MakePoint(b.centroid_lng, b.centroid_lat), 4326)::geography, ST_SetSRID(ST_MakePoint(125.3469, 6.7569), 4326)::geography, 3000) AS within_3km FROM users u JOIN barangays b ON b.name = u.barangay WHERE u.role = 'responder' AND u.is_approved = true AND u.responder_status = 'available';

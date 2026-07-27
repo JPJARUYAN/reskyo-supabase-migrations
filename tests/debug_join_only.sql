@@ -1,0 +1,1 @@
+SELECT u.uid, u.barangay, b.name FROM users u JOIN barangays b ON b.name = u.barangay WHERE u.role = 'responder' AND u.is_approved = true AND u.responder_status = 'available';

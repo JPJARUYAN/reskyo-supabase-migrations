@@ -1,0 +1,1 @@
+DELETE FROM dispatches WHERE incident_id IN (SELECT id FROM incidents WHERE description = 'TEST-debug');

@@ -1,0 +1,1 @@
+SELECT COUNT(*) AS dispatch_count FROM dispatches d JOIN incidents i ON i.id = d.incident_id WHERE i.description = 'TEST-debug';

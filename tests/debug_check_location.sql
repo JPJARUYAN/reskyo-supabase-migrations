@@ -1,0 +1,1 @@
+SELECT id, latitude, longitude, location IS NOT NULL AS has_location FROM incidents WHERE description = 'TEST-debug';

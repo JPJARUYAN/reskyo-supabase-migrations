@@ -1,0 +1,1 @@
+SELECT uid, barangay, length(barangay) AS blen FROM users WHERE uid = (SELECT uid FROM users WHERE role = 'responder' LIMIT 1);

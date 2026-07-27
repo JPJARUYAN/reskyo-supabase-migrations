@@ -1,0 +1,1 @@
+SELECT uid, role, is_approved, responder_status, barangay FROM users WHERE role = 'responder';

@@ -1,0 +1,1 @@
+SELECT name, length(name) AS nlen FROM barangays WHERE name = 'Magsaysay';

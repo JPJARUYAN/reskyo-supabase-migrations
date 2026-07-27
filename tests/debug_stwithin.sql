@@ -1,0 +1,1 @@
+SELECT ST_DWithin(ST_SetSRID(ST_MakePoint(125.3469, 6.7529), 4326)::geography, ST_SetSRID(ST_MakePoint(125.3469, 6.7569), 4326)::geography, 3000) AS test1, ST_DWithin(b.centroid, ST_SetSRID(ST_MakePoint(125.3469, 6.7569), 4326)::geography, 3000) AS test2 FROM barangays b WHERE b.name = 'Magsaysay';
