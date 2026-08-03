@@ -13,6 +13,18 @@ ALTER TABLE road_nodes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE road_edges ENABLE ROW LEVEL SECURITY;
 
 -- ============================================
+-- TABLE PRIVILEGES (required for API access)
+-- RLS policies only filter rows; roles still need
+-- GRANT on the tables themselves.
+-- ============================================
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO authenticated;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO anon;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO authenticated;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO anon;
+GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO authenticated;
+GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA public TO anon;
+
+-- ============================================
 -- HELPER: Check user role (avoids repeating subquery)
 -- ============================================
 CREATE OR REPLACE FUNCTION auth_user_role()
